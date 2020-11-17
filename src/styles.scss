@@ -1,0 +1,24 @@
+html, body {
+  font-family: sans-serif, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.degree-symbol {
+  font-size: 20px;
+}
+
+.weather-detail-icon {
+  margin-right: .2em;
+  color: #f1f1f1;
+}
+

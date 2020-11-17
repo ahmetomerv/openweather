@@ -1,0 +1,26 @@
+.card-container {
+  background-size: cover;
+  background-position: center;
+  width: 750px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffd;
+
+  .card-detail-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ffffff30;
+    background: rgb(57 59 65 / 28%);
+
+    .card-detail-cell {
+      padding: 10px;
+      font-size: 13px;
+    }
+  }
+}
+
+.card-detail-cell .weather-detail-icon {
+  margin-right: .5em;
+}

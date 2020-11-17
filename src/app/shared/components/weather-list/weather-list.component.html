@@ -1,0 +1,6 @@
+<h1 class="weather-list-header">Weather:</h1>
+
+<div *ngFor="let weather of cityWeatherList">
+  <app-weather-item [item]="weather">
+  </app-weather-item>
+</div>

@@ -1,0 +1,22 @@
+.weather-item-container {
+  display: flex;
+  border-top: 1px solid #b2b3b111;
+  border-bottom: 1px solid #b2b3b111;
+  justify-content: flex-start;
+  cursor: pointer;
+  padding-right: 2em;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.weather-item-cell {
+  margin-right: 0.5em;
+  padding: 1em 0.3em 1em 1em;
+  font-weight: 200;
+}
+
+.weather-item-selected {
+  color: #747777;
+}

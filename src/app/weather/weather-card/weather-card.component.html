@@ -1,0 +1,23 @@
+<div class="card-container" [style.backgroundImage]="getCityImgUrl(forecast && forecast.length ? forecast[0].city.name : '')">
+  <div class="card-content">
+    <h1> {{ forecast && forecast.length ? forecast[0].city.name : '' }} </h1>
+    <div *ngFor="let item of forecast" class="card-detail-container">
+      <div class="card-detail-cell" [title]="'Forecast date: ' + (item.dt_txt | date : 'MMM d, y, h:mm a')">
+        <span>{{ item.dt_txt | date : 'MMM d, y, h:mm a' }}</span>
+      </div>
+      <div class="card-detail-cell" [title]="'Temperature: ' + (item.main.temp | temperatureDegree)">
+        <em class="fas fa-thermometer-half weather-detail-icon"></em>
+        <span class="card-title-big" [innerHTML]="item.main.temp | temperatureDegree"></span>
+      </div>
+      <div class="card-detail-cell" [title]="'Weather: ' + (item.weather[0].description | titlecase)">
+        <em class="fas fa-cloud-sun weather-detail-icon"></em>
+        <span>{{ item.weather[0].description | titlecase }}</span>
+      </div>
+      <div class="card-detail-cell" [title]="'Wind speed: ' + item.wind.speed">
+        <em class="fab fa-pagelines weather-detail-icon"></em>
+        <span>{{ item.wind.speed }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+

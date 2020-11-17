@@ -1,0 +1,19 @@
+<div
+  class="weather-item-container"
+  [ngClass]="{'weather-item-selected': item.id === (selectedItem && selectedItem.id ? selectedItem.id : '')}"
+  (click)="itemClickHandler()"
+  [title]="'Wind: ' + item.wind.speed + ', Temperature: ' + (item.main.temp | temperatureDegree) + ' in ' + item.name">
+  <div class="weather-item-cell">
+    {{ item.name }}
+  </div>
+  <div class="weather-item-cell">
+    <em class="fas fa-thermometer-half weather-detail-icon"></em>
+    <span>
+      {{ item.main.temp | temperatureDegree }}
+    </span>
+  </div>
+  <div class="weather-item-cell">
+    <em class="fab fa-pagelines weather-detail-icon"></em>
+    <span>{{ item.wind.speed }}</span> 
+  </div>
+</div>
