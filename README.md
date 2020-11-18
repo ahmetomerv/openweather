@@ -21,7 +21,7 @@ The is the module which handles the view of the application. SCSS is used to sty
 ## Service layer
 The services are placed in the core module. A base API service is used to host the HTTP methods that sit in between other services to reuse the some functionalites, such as passing a base url, which in this case comes from the Environment service, and handling errors.
 
-The Weather service handles and receive server calls to the OpenWeather API. The methods and respones are represented by interfaces of expected input and output. The incoming respones are going through a pipe, then to our custom mappersi which also are located in the core module. The mappers transform and only obtain the needed data.
+The Weather service handles and receive server calls to the OpenWeather API. The methods and respones are represented by interfaces of expected input and output. The incoming respones are going through a pipe, then to our custom mappers which also are located in the core module. The mappers transform and only obtain the needed data.
 
 ## Pipes and Utilities
 The app makes use of built-in pipes, such as `TitleCase` and `Date` to formate titles and dates. It also uses a custom pipe, `TemperatureDegree`, which is used to transform the given temperature value in Celsius unit format (`C°`).
