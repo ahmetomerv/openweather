@@ -1,6 +1,6 @@
 # Openweather
 
-This is a single page application built with Angular version 10 which shows weather information of 5 cities. The data is provied by OpenWeather API. It is deployed to Heroku, running on a Node/Express server.
+This is a single page application built with Angular version 10 which shows weather information of 5 cities. The data is provided by OpenWeather API. It is deployed to Heroku, running on a Node/Express server.
 
 The deployed version can be found on: https://openweather-client.herokuapp.com/
 
