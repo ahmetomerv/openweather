@@ -7,6 +7,8 @@ import Utils from '../utils';
 export class TemperatureDegreePipe implements PipeTransform {
 
   public transform(temp: any, ...args: unknown[]): string {
+    temp = temp || '';
+    
     if (temp) {
       temp = Utils.kelvinToCelsius(temp);
       temp = temp + 'C';

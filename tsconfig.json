@@ -5,7 +5,7 @@
     "baseUrl": "src",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
-    "types": ["node"],
+    "types": ["node", "jest"],
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,

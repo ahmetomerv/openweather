@@ -25,7 +25,7 @@ export interface WeatherInterface {
     type: number;
     id: number;
     country: string;
-    sunries: number;
+    sunrise: number;
     sunset: number;
   };
   id: number;

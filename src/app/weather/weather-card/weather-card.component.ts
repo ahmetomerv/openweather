@@ -25,6 +25,8 @@ export class WeatherCardComponent implements OnInit {
   ngOnInit(): void { }
 
   public getCityImgUrl(city: string): string {
+    city = city || this.cityImgUrl[Object.keys(this.cityImgUrl)[0]];
+
     if (city) {
       city = city.toLowerCase();
       return `url(${this.cityImgUrl[city]})`

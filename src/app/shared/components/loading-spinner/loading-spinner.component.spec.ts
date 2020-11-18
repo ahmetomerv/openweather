@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, TestBed } from '@angular/core/testing';
 
 import { LoadingSpinnerComponent } from './loading-spinner.component';
 
@@ -10,16 +10,21 @@ describe('LoadingSpinnerComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ LoadingSpinnerComponent ]
     })
-    .compileComponents();
-  });
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(LoadingSpinnerComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    .compileComponents().then(() => {
+      fixture = TestBed.createComponent(LoadingSpinnerComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
+    })
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should show spinner', fakeAsync(() => {
+    component.show = true;
+    fixture.detectChanges();
+    const element = fixture.nativeElement.querySelector('.spinner-container');
+    expect(element).toBeTruthy();
+  }));
 });

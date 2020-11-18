@@ -1,6 +1,6 @@
 <div class="card-container" [style.backgroundImage]="getCityImgUrl(forecast && forecast.length ? forecast[0].city.name : '')">
   <div class="card-content">
-    <h1> {{ forecast && forecast.length ? forecast[0].city.name : '' }} </h1>
+    <h1 class="card-content-header"> {{ forecast && forecast.length ? forecast[0].city.name : '' }} </h1>
     <div *ngFor="let item of forecast" class="card-detail-container">
       <div class="card-detail-cell" [title]="'Forecast date: ' + (item.dt_txt | date : 'MMM d, y, h:mm a')">
         <span>{{ item.dt_txt | date : 'MMM d, y, h:mm a' }}</span>
