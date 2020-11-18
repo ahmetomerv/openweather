@@ -42,6 +42,6 @@ The unit tests can be run against the spec files with `ng test` command, which t
 
 The app's services make http calls which return Observables, and so for the unit testing of services and components that use these services, a mock(stub) service is used. Expected responses are returned from the mock service in Observables by using `Observable.of()`.
 
-In our unit tests where service calls are made, a mock service is provied. In the test suite's `beforeEach()` lifecycle, the `TestBed` is configured with a module with the real service, but will use the mock service provied with the `useClass` property.
+In our unit tests where service calls are made, a mock service is provided. In the test suite's `beforeEach()` lifecycle, the `TestBed` is configured with a module with the real service, but will instead use the mock service provided with the `useClass` property.
 
 The components unit tests test various cases whether certain views are rendered or properties have values.
